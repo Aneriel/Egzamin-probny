@@ -1,35 +1,44 @@
-﻿using System.Xml;
-
-namespace Egzamin_próbny
+﻿public static void Wzorek(int n)
 {
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-             
-            int widthStat = int.Parse(Console.ReadLine());
-            if(widthStat %2 == 0)
-            {
-                widthStat -= 1;
-            }
-            int width = widthStat;
-            for(int x =widthStat; x> 0; x--)
-            {
-                
-                Console.WriteLine();
-                for (int i = x; x > 0; i--)
-                {
-                    if (width <= x)
-                    {
 
-                        Console.Write(" ");
-                    }
-                    else
-                    {
-                        Console.Write("*");
-                    }
-                }
+    int x, y, z = 0;
+
+    var c = n / 2;
+
+    if (n % 2 == 0)
+    {
+        for (x = c; x >= 1; x--)
+        {
+
+            for (y = c; y > x; y--)
+            {
+                Console.Write(" ");
             }
+
+            for (z = 1; z < (x * 2); z++)
+            {
+                Console.Write("*");
+            }
+
+            Console.Write('\n');
+        }
+    }
+    else
+    {
+        for (x = c + 1; x >= 1; x--)
+        {
+
+            for (y = c + 1; y > x; y--)
+            {
+                Console.Write(" ");
+            }
+
+            for (z = 1; z < (x * 2); z++)
+            {
+                Console.Write("*");
+            }
+
+            Console.Write('\n');
         }
     }
 }

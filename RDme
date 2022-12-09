@@ -1,0 +1,10 @@
+Dane są dwie niepuste tablice liczb całkowitych int[] a oraz int[] b o tym samym rozmiarze n oraz parametr nieujemny k (0 <= k <= n).
+
+Napisz procedurę o sygnaturze
+
+public static void Print(int[] a, int[] b, int k)
+wypisującą na standardowe wyjście, w porządku rosnącym, te indeksy i, dla których wartości a[i] == b[i+j], gdzie -k <= j <= k.
+
+Tablice indeksowane są od 0.
+Liczby wypisz w jednej linii, oddzielając je pojedynczą spacją.
+W przypadku braku liczb spełniających warunki zadania wypisz słowo empty.
